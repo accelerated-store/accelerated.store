@@ -1,7 +1,7 @@
-import { StackContext, StaticSite } from "sst/constructs";
+import { StackContext, NextjsSite } from "sst/constructs";
 
 export function API({ stack }: StackContext) {
-  const website = new StaticSite(stack, "website", {
+  const website = new NextjsSite(stack, "website", {
     path: "packages/website",
     customDomain: {
       domainName:
